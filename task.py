@@ -73,10 +73,10 @@ def create_features_dict() -> dict:
     #"B1": tf.io.FixedLenFeature(shape=[33, 33], dtype=tf.float32)
     # This represents a 33x33 patch of spectral data for Band 1.
     features_dict = {
-        name: tf.io.FixedLenFeature(shape=[33, 33], dtype=tf.float32) for name in BANDS
+        name: tf.io.FixedLenFeature(shape=[33, 33], dtype=tf.float64) for name in BANDS
     }
 
-    features_dict[LABEL] = tf.io.FixedLenFeature(shape=[1, 1], dtype=tf.float32)
+    features_dict[LABEL] = tf.io.FixedLenFeature(shape=[1, 1], dtype=tf.float64)
 
     return features_dict
 
