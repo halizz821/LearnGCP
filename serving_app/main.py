@@ -49,6 +49,7 @@ def run_predict() -> dict:
 if __name__ == "__main__":  #Ensures the app runs only when executed directly (not when imported as a module).
     import os
 
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    #app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    app.run(host="0.0.0.0", port=8080)
     
     #Without starting the web server, your REST API endpoints (e.g., /ping or /predict) are not accessible.
