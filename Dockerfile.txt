@@ -1,6 +1,0 @@
-FROM gcr.io/google-appengine/python:3.10
-
-WORKDIR /app
-COPY . /app
-RUN pip install -r requirements.txt
-CMD ["gunicorn", "-b", ":$PORT", "main:app"]
